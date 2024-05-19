@@ -1,0 +1,23 @@
+<template id="PICO-DIALOG">
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.classless.min.css"
+  />
+  <dialog>
+    <article>
+      <header>
+        <button aria-label="Close" rel="prev"></button>
+        <p>
+          <strong>
+            <slot name="header">🦙 Uh oh! Something went wrong.</slot>
+          </strong>
+        </p>
+      </header>
+      <section>
+        <slot name="content">
+          <p>There was an error during your request. Please try again later.</p>
+        </slot>
+      </section>
+    </article>
+  </dialog>
+</template>

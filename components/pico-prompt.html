@@ -1,0 +1,9 @@
+<template id="PICO-PROMPT">
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.classless.min.css"
+  />
+  <label for="prompt"><slot name="label">Prompt:</slot></label>
+  <textarea name="prompt" id="prompt"></textarea>
+  <small>75 of 75 tokens remaining</small>
+</template>
