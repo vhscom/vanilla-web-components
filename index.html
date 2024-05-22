@@ -26,10 +26,15 @@
         "https://cdn.jsdelivr.net/npm/fetch-inject@3.3.1/fetch-inject.min.js"
       );
       fetchInject(
-        ["./components/pico-dialog.js", "./components/pico-prompt.js"],
+        [
+          "./components/pico-dialog.js",
+          "./components/pico-prompt.js",
+          "./components/pico-fab.js",
+        ],
         fetchInject([
           "./components/pico-dialog.html",
           "./components/pico-prompt.html",
+          "./components/pico-fab.html",
         ]).then(() => {
           document.body.style.visibility = "visible";
         })
@@ -76,6 +81,7 @@
         </pico-prompt>
         <h3>pico-dialog</h3>
         <p>This disalog is open by default.</p>
+        <!-- <pico-dialog open> -->
         <pico-dialog open>
           <span slot="header">Hello from the pico-dialog custom element!</span>
           <section slot="content">
@@ -85,8 +91,17 @@
               <li>Press <kbd>Return</kbd> to close this dialog now.</li>
               <li>No other keypress should be required to close.</li>
             </ul>
+            <pico-fab
+              style="display: none"
+              autospin
+              autostart
+              model="592fe33f5a4c446ba4ae1e7c272c577c"
+            ></pico-fab>
           </section>
         </pico-dialog>
+        <h3>pico-fab</h3>
+        <p>Display Fabs</p>
+        <pico-fab model="bbe572bb10234c8e9309603fa54fbbe5"></pico-fab>
       </section>
 
       <!-- Preview -->
